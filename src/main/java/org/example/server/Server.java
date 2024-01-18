@@ -22,6 +22,7 @@ public class Server {
 
                 ClientHandler clientHandler = new ClientHandler(clientSocket);
                 clientHandler.sendMessage("Welcome to BattleShips Game !");
+                clientHandler.sendMessage("Legend: '-' - possible ship, 'S' - ship, 'o' - miss, 'X' - hit ");
                 clients.add(clientHandler);
 
                 waitingRoom.addPlayer(clientHandler);

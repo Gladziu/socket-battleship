@@ -28,7 +28,7 @@ public class ClientHandler {
         board = new char[BOARD_SIZE][BOARD_SIZE];
         for (int i = 0; i < BOARD_SIZE; i++) {
             for (int j = 0; j < BOARD_SIZE; j++) {
-                board[i][j] = '~';
+                board[i][j] = '-';
             }
         }
         addShipOnRandomField();
@@ -72,9 +72,7 @@ public class ClientHandler {
     public String receiveMessage() {
         String messageFromClient = null;
         try {
-            System.out.println("-=-=-=- before readline in clienHandler");
             messageFromClient = bufferedReader.readLine();
-            System.out.println("-=-=-=- after readline in clienHandler");
         } catch (IOException e) {
             closeEverything(clientSocket, bufferedReader, bufferedWriter);
         }

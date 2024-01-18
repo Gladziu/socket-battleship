@@ -96,13 +96,13 @@ public class Game implements Runnable {
 
     private String printBoards(ClientHandler player) {
         StringBuilder builder = new StringBuilder();
-        char[][] playerBoard = player.getBoard();
-        builder.append("\nYours: \n");
-        setUpBoard(playerBoard, builder);
-
         char[][] opponentBoard = getOpponent(player).getBoard();
-        builder.append("Opponent: \n");
+        builder.append("\nOpponent: \n");
         setUpOpponentBoard(opponentBoard, builder);
+
+        char[][] playerBoard = player.getBoard();
+        builder.append("Yours: \n");
+        setUpBoard(playerBoard, builder);
 
         return builder.toString();
     }
@@ -128,7 +128,7 @@ public class Game implements Runnable {
             for (int j = 0; j < BOARD_SIZE; j++) {
                 builder.append("|");
                 if (board[i][j] == 'S') {
-                    builder.append('~');
+                    builder.append('-');
                 } else {
                     builder.append(board[i][j]);
                 }
