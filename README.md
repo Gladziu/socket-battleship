@@ -23,7 +23,7 @@ To make a move, a player gives a place to shoot, e.g: A3.
 '-' - possible ship, 
 'S' - ship, 
 'o' - miss, 
-'X' - hit "
+'X' - hit
 
 
 # How to start project on your own
